@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ron's Relaxing Retreats</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the navbar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            align-items: center;
+            padding: 10px;
+        }
+        .navbar-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        /* Container for navigation links */
+        .nav-links {
+            display: flex;
+        }
+        .navbar a:link, .navbar a:visited {
+            color: white; /* Ensure unvisited and visited links are white */
+            text-decoration: none; /* Remove underlines */
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .navbar a:hover, .navbar a:active {
+            background-color: #ddd; /* Background for hover/active state */
+            color: black; /* Change color when hovered or active */
+            text-decoration: none;
+        }
+        /* Search input and buttons */
+        .navbar input[type="text"] {
+            padding: 6px;
+            margin-left: auto;
+            border: none;
+            font-size: 17px;
+            border-radius: 4px;
+        }
+        .navbar button {
+            padding: 6px 10px;
+            margin-left: 5px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+            border-radius: 4px;
+        }
+        .navbar button:hover {
+            background-color: #ccc;
+        }
+    
+        /* Styles for the home page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.5); /* Optional: to make text readable over the image */
+        }
+        .intro h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .intro button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f1c40f;
+            border: none;
+            color: #333;
+        }
+        .intro button:hover {
+            background-color: #d4ac0d;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 30px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+    
+        /* Styles for the recommendation cards */
+        #recommendations-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: to contrast against background */
+        }
+        .rec-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            background-color: white;
+            max-width: 300px;
+            text-align: center;
+            color: #333;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .rec-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .rec-card h3 {
+            margin-top: 12px;
+            font-size: 24px;
+        }
+        .rec-card p {
+            font-size: 16px;
+            color: #555;
+        }
+        .local-time {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">Ron's Relaxing Retreats</div>
+        <a href="travel_recommendation.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="contact_us.html">Contact Us</a>
+        <input type="text" id="search-input" placeholder="Search for recommendations...">
+        <button type="button" id="search-button">Search</button>
+        <button type="button" id="reset-button">Reset</button>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="intro">
+        <h1>Welcome to Ron's Relaxing Retreats</h1>
+        <p>Your journey to the most serene and rejuvenating destinations begins here. Explore, unwind, and discover hidden gems around the world.</p>
+        <button onclick="location.href='booking.html'">Book Now</button>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <!-- Recommendations Container -->
+    <div id="recommendations-container"></div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
